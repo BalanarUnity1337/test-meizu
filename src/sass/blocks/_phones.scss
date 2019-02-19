@@ -1,0 +1,22 @@
+.phones {
+  @include p-reset();
+
+  font-size: 11px;
+  line-height: 1.45;
+  color: #82828c;
+  text-align: center;
+}
+
+.phones__phone {
+  color: inherit;
+}
+
+@media #{$tablet-width} {
+  .phones {
+    display: inline;
+  }
+
+  .phones__phone {
+
+  }
+}

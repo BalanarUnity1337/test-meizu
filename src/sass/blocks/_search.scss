@@ -1,0 +1,187 @@
+.search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  visibility: hidden;
+
+  background-image: url("../assets/img/pattern-02.png");
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  box-shadow: inset 0 0 150px rgba(#2e3192, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  &--opened {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.search__inner {
+  @include container();
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+}
+
+.search__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  font-size: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-color: #ffffff;
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    width: 26px;
+    height: 2px;
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    width: 2px;
+    height: 26px;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 0.75;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.5;
+    }
+
+    background-color: rgba(#2e3192, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search__title {
+  margin-bottom: 35px;
+
+  font-size: 32px;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+}
+
+.search__field-wrapper {
+  position: relative;
+}
+
+.search__field {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding: 19px 60px 19px 20px;
+
+  border: none;
+
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 300;
+  color: #555555;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:active {
+    .search__icon {
+      opacity: 0.75;
+    }
+  }
+
+  &:active {
+    background-color: rgba(#82828c, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search__icon {
+  fill: #82828c;
+  transition: opacity 0.3s ease;
+  will-change: contents;
+}
+
+@media #{$tablet-width} {
+  .search__title {
+    font-size: 38px;
+  }
+}
+
+@media #{$desktop-width} {
+  .search {
+
+  }
+
+  .search__inner {
+    max-width: 770px;
+  }
+
+  .search__title {
+    font-size: 42px;
+  }
+}

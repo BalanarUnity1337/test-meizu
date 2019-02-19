@@ -1,0 +1,29 @@
+.title {
+  @include h-reset();
+
+  margin-top: 27px;
+  margin-bottom: 22px;
+
+  font-size: 18px;
+  font-weight: 300;
+  color: #555555;
+  text-align: center;
+}
+
+@media #{$tablet-width} {
+  .title {
+    margin-top: 23px;
+    margin-bottom: 15px;
+
+    font-size: 23px;
+  }
+}
+
+@media #{$desktop-width} {
+  .title {
+    margin-top: 19px;
+    margin-bottom: 13px;
+
+    font-size: 26px;
+  }
+}
