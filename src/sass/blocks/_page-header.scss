@@ -1,7 +1,9 @@
 .page-header {
-  @include container();
+
 }
 
 .page-header__inner {
+  @include container();
+
   padding-top: 65px;
 }

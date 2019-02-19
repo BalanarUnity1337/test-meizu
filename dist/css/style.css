@@ -507,27 +507,25 @@ html {
   .page-footer {
     margin-top: 9px; } }
 
-.page-header {
+.page-header__inner {
   margin: 0 auto;
   padding-left: 7.8125%;
-  padding-right: 7.8125%; }
+  padding-right: 7.8125%;
+  padding-top: 65px; }
   @media (min-width: 768px) {
-    .page-header {
+    .page-header__inner {
       padding-left: 3.906%;
       padding-right: 3.906%; } }
   @media (min-width: 1280px) {
-    .page-header {
+    .page-header__inner {
       max-width: 1170px;
       padding-left: 4.297%;
       padding-right: 4.297%; } }
   @media (min-width: 1600px) {
-    .page-header {
+    .page-header__inner {
       max-width: 1440px;
       padding-left: 5%;
       padding-right: 5%; } }
-
-.page-header__inner {
-  padding-top: 65px; }
 
 .page-wrapper {
   display: -webkit-box;
